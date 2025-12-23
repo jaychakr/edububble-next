@@ -17,7 +17,7 @@ export default async function PostPage({ searchParams } : Props) {
       <div className="p-2">
         <Suspense fallback={<p>Loading...</p>}>
           <img src={docSnap.data().image} className="w-3/4 m-auto rounded-xl"/>
-          <p className="p-2">{docSnap.data().content}</p>
+          <p className="p-2 w-3/4 m-auto">{docSnap.data().content}</p>
         </Suspense>
       </div>
     );
