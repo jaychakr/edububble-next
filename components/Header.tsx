@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -12,7 +13,7 @@ export default function Header() {
           height={20}
           priority
         />
-        <h1 className="p-1">EduBubble</h1>
+        <Link href="/"><h1 className="p-1">EduBubble</h1></Link>
         <Image
           className=""
           src="/bubbles.svg"
