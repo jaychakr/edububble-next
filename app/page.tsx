@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import db from "./firebase";
+import { db } from "./firebase";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 type Post = {
     id: string;
