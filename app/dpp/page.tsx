@@ -18,15 +18,16 @@ export default async function PostPage({ searchParams } : Props) {
     const imageURL = await getDownloadURL(ref(storage, imageID));
     return (
       <div className="p-2">
+        <h1 className="text-center text-[2rem] font-bold my-[0.67em]">{docSnap.data().title}</h1>
         <Image
           src={imageURL}
           alt="EduBubble logo"
           width={500}
           height={100}
           priority
-          className="w-3/4 m-auto rounded-xl"
+          className="w-3/4 mx-auto rounded-xl"
         />
-        <p className="p-2 w-3/4 m-auto">{docSnap.data().content}</p>
+        <p className="w-3/4 mx-auto my-4">{docSnap.data().content}</p>
       </div>
     );
   } else {
