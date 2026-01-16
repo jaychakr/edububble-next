@@ -22,7 +22,7 @@ export default function Footer() {
           priority
         />
       </div>
-      <h1>© 2007 - 2025 EduBubble</h1>
+      <h1>© 2007 - 2026 EduBubble</h1>
       <h1>All rights reserved</h1>
     </footer>
   );

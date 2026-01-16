@@ -38,9 +38,14 @@ export default function Home() {
         posts.length ?
         posts.map(post => {
           return (
-            <div key={post.id} className="border border-black rounded-xl p-2">
-              <Link href={`/dpp/?p=${post.id}`} className="text-blue-500">{post.title}</Link>
-            </div>
+            <Link href={`/dpp/?p=${post.id}`} key={post.id}>
+              <div key={post.id} className="border border-black rounded-xl p-2">
+                <div className="flex justify-center">
+                  <span className="text-blue-500">{post.title}</span>
+                </div>
+                <p>{post.content.substring(0, 150)}...</p>
+              </div>
+            </Link>
           )
         }) : <p>Loading...</p>
       }
